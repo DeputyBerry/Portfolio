@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap');
+
+html  {
+    margin: auto 0;
+    font-size: 24px;
+    font-family: "Cinzel", sans-serif;
+  }
+  
+ nav {
+   display: flex;
+   height: 50px;
+ }
+
+ nav > ul{
+  display: inherit;
+  margin: 0 auto;
+  list-style-type: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  justify-content: center;
+  gap: 80px;
+ }
+ 
+ ul > li:first-child{
+   margin-right: 20rem;
+ }
+
+ ul > li:last-child{
+   margin-left: 20rem;
+ }
+
+ li > a {
+   text-decoration: none;
+   color: black;
+ }
+
+ main {
+   background-image: url(https://cdn.discordapp.com/attachments/769333550008369182/782291098680426516/salon-main-img.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 90rem;
+   margin-top: 35px;
+ }
+
+ main > div + div{
+  background: black;
+  display: inline-block;
+  position: relative;
+  top: 35rem;
+  right: 37rem;
+  color: white;
+  height: 20rem;
+  width: 20rem;
+  text-align: center;
+ }
+
+ main > div + div > p {
+  text-align: start;
+  position: relative;
+  top: 80px;
+  left: 20px;
+  width: fit-content;
+ }
+
+ main > div + div > a {
+  position: relative;
+  top: 150px;
+  right: 100px;
+  color: black;
+  text-decoration: none;
+  background: white;
+  padding: 20px 25px 20px 25px;
+  font-weight: 500;
+ }
+
+ strong{
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 0 10px 0 20px;
+ }
+
+ .header:first-of-type{
+  display: inline-block;
+  position: relative;
+  top: 25%;
+  left: 15%;
+ }
+
+ .header:first-of-type > h1 {
+  letter-spacing: 5px;
+  font-size: 8rem;
+  color: white;
+  font-weight: 100;
+ }
+
+ .header:first-of-type > h5 {
+  position: relative;
+  bottom: 125px;
+  font-size: 1.5rem;
+  color: white;
+  word-spacing: 20px;
+  font-weight: 100;
+ }
+
+ .header:first-of-type > span{
+   background: black;
+   padding: 25px 75px 25px 50px;
+   position: relative;
+   bottom: 90px;
+ }
+
+ span > a {
+   text-decoration: none;
+   color: white;
+ }
+
+ .services{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5em;
+  color: black;
+ }
+
+ .momentum{
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  background: #F3F4F6;
+  align-items: start;
+  justify-content: center;
+  padding: 5rem 5rem 5rem 10rem;
+}
+
+.momentum > h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.momentum > p {
+  width: 31rem;
+  line-height: 1.5rem;
+}
+
+.momentum > img {
+  position: absolute;
+  left: 60rem;
+  height: 700px;
+}
+
+.momentum > a {
+  margin-top: 100px;
+  padding: 1rem 2.5rem;
+  background: black;
+  color: white;
+  text-decoration: none;
+  word-spacing: 10px;
+}
+
+.ladies{
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  gap: 5em;
+}
+
+.ladies > div > span {
+  position: relative;
+}
+
+.Alita{
+  background-image: url("images/alita-williams.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+
+.Ayesha{
+  background-image: url("images/ayesha-lake.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.Smith{
+  background-image: url("images/michelle-smith.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.ladies > div > span {
+  display: flex;
+  background: black;
+  flex-wrap: nowrap;
+  color: white;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: center;
+  position: relative;
+  top: 32em;
+  padding: 5.5px;
+  height: 7%;
+}
+
+ #wrapper{
+  display: flex;
+  position: relative;
+  top: 10em;
+  width: 75%;
+  flex-direction: row-reverse;
+ }
+
+ #wrapper > img {
+  height: 800px;
+  position: relative;
+  left: 25em;
+ }
+
+ #wrapper-text {
+  line-height: 3;
+  font-size: 2em;
+  position: relative;
+  bottom: 10em;
+  left: 7em;
+ }
+
+ #wrapper-text > a {
+  padding: 20px;
+  background: black;
+  position: relative;
+  top: 190px;
+  text-decoration: none;
+  color: white;
+  width: 5%;
+}
+
+ #tag  {
+    font-size: 2em;
+ }
+
+ .lookbook{
+   margin-left: 23em;
+   width: 60em;
+   height: 90em;
+ }
+
+ .lookbook > h3 {
+   text-align: center;
+   font-weight: 700;
+   font-size: 2em;
+ }
+
+ .lookbook > section {
+   float: left;
+   margin-top: 4em;
+   width: 20em;
+   height: auto;
+ }
+
+ .lookbook > section > img{
+   border: 0.4em solid white;
+   width: 18em;
+   height: auto;
+ }
