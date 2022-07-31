@@ -3976,7 +3976,7 @@ input, select, textarea {
 			margin: 20px auto;
 			overflow: hidden;
 			box-shadow: 1px 1px 4px rgba(0,0,0,0.08);
-			border: 7px solid rgba(255,255,255,0.6);
+			border: 2px solid white;
 		}
 
 		.ia-container figure {
@@ -3997,7 +3997,6 @@ input, select, textarea {
 
 		.ia-container img {
 			display: block;
-			max-width: 100%;
 			/* background image fills height of container */
 			height: 100%;
 			/* image resolution adjusts to size of container */
