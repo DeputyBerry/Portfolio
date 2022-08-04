@@ -1,0 +1,26 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkslategray;
+    color: #f0f8ff
+}
+
+h2{
+    
+}
+
+/* container to hold img and data */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10%;
+    height: 100%;
+    gap: 25px;
+}
+
