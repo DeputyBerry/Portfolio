@@ -21,9 +21,9 @@ async function renderMeal() {
     const mealSection = document.createElement('section')
     // use the meal data to create a meal
     // for each ingredient in called meal, create an li
-    let video = 'https://www.youtube.com/embed?v=A96hbwobKKs'
     mealSection.innerHTML = `
     <h2>${meal.meals[0].strMeal}</h2>
+    <h4>Ingredients:</h4>
     <ul>
         <li>${meal.meals[0].strIngredient1} -
             <span>${meal.meals[0].strMeasure1}</span>
@@ -88,8 +88,10 @@ async function renderMeal() {
     </ul>
     <h2>Instructions:</h2>
     <p>${meal.meals[0].strInstructions}</p>
-    <iframe width="560" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+    <iframe width="560" height="315" src="${meal.meals[0].strYoutube.replace(
+        'watch?v=',
+        'embed/'
+    )}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `
     // if mealSection innerHTML already exists replace it with the new meal
     if (mealContainer.innerHTML !== '') {
@@ -118,6 +120,11 @@ async function renderMeal() {
         }
         
     })
+
+    // append img to img tag
+    const img = document.querySelector('img')
+    img.src = meal.meals[0].strMealThumb
+    img.alt = meal.meals[0].strMeal
 
 
     
