@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@1,300&display=swap');
+
+
+:root {
+    --light: #fff;
+    --purple: #871CA1;
+    --darkBlue: #2C1679;
+    --teal: #0CCDDB;
+}
+
 * {
     margin: 0 auto;
     padding: 0;
@@ -5,12 +15,220 @@
 }
 
 body {
-    background-color: darkslategray;
-    color: #f0f8ff
+    background-color: #F5F5F5;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 100%;
+    font-family: 'Fredoka One', sans-serif;
 }
 
 h2{
-    
+    margin: 25px 0;
+}
+
+h4 {
+    margin: 15px 0;
+}
+
+iframe {
+    margin-top: 15px;
+}
+
+p {
+    width: 75%;
+    margin-right: 25%;
+}
+
+*,*:before,*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+
+#intro {
+    width: 200px;
+    margin: 100px auto 0;
+}
+
+.title-word {
+    animation: color-animation 4s linear infinite
+}
+
+.title-word-1 {
+    --color-1: #c591d4;
+    --color-2: #a3efe5;
+    --color-3: #876cab;
+}
+
+.title-word-2 {
+    --color-1: #666693;
+    --color-2: #8ebec9;
+    --color-3: #c591c5;
+}
+
+.title-word-3 {
+    --color-1: #876cab;
+    --color-2: #c591c5;
+    --color-3: #a3efe5;
+}
+
+
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1);
+    }
+
+    32% {
+        color: var(--color-1);
+    }
+
+    33% {
+        color: var(--color-2);
+    }
+
+    65% {
+        color: var(--color-2);
+    }
+
+    66% {
+        color: var(--color-3);
+    }
+
+    99% {
+        color: var(--color-3);
+    }
+
+    100% {
+        color: var(--color-1);
+    }
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 4.5vw;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    margin-top: 40px;
+    width: 100%
+}
+
+.button .bottom {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--teal);
+    display: block;
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+}
+
+.button .top {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 64%;
+    height: 100%;
+    padding: 24px 34px 22px 34px;
+    border: 2px solid var(--darkBlue);
+}
+
+.button-dark .top {
+    border: 2px solid var(--light);
+}
+
+.button .top .label {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: var(--purple);
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: all .15 ease-out;
+    -moz-transition: all .15 ease-out;
+    -o-transition: all .15 ease-out;
+    transition: all .15 ease-out;
+}
+
+.button-dark .top .label {
+    color: var(--light);
+}
+
+.button:hover .bottom {
+    left: 0;
+    top: 0;
+    background-color: var(--purple);
+}
+
+.button:hover .top .label {
+    color: var(--teal);
+}
+
+.button-border {
+    position: absolute;
+    background-color: var(--teal);
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.button:hover .top .button-border-left,
+.button:hover .top .button-border-right {
+    height: calc(100% + 2px);
+}
+
+.button:hover .top .button-border-top,
+.button:hover .top .button-border-bottom {
+    width: calc(100% + 2px);
+}
+
+.button-border-left {
+    left: -2px;
+    bottom: -2px;
+    width: 2px;
+    height: 0;
+}
+
+.button-border-top {
+    left: -2px;
+    top: -2px;
+    width: 0;
+    height: 2px;
+}
+
+.button-border-right {
+    right: -2px;
+    top: -2px;
+    width: 2px;
+    height: 0;
+}
+
+.button-border-bottom {
+    right: -2px;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
 }
 
 /* container to hold img and data */
@@ -19,8 +237,25 @@ h2{
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 10%;
+    margin: 5% 5% 0 5%;
     height: 100%;
     gap: 25px;
 }
 
+.random {
+    display: flex;
+    margin: 50px auto;
+    padding: 25px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    border: #f0f8ff 1px solid;
+    color: #f0f8ff;
+    background-color: transparent;
+}
+
+
+.random:hover {
+    cursor: pointer;
+}
