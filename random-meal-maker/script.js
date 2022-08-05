@@ -1,5 +1,5 @@
 // run renderMeal() function on click of the button with class of random
-document.querySelector('button').addEventListener('click', renderMeal)
+document.querySelector('.label').addEventListener('click', renderMeal)
 
 
 const mealContainer = document.querySelector('.data')
@@ -19,6 +19,8 @@ async function renderMeal() {
     const meal = await getMeals()
     // create a section for the meal
     const mealSection = document.createElement('section')
+    // add class of recipe to mealSection
+    mealSection.classList.add('recipe')
     // use the meal data to create a meal
     // for each ingredient in called meal, create an li
     mealSection.innerHTML = `
