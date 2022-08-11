@@ -1,9 +1,9 @@
+
 // run renderMeal() function on click of the button with class of random
 document.querySelector('.label').addEventListener('click', renderMeal)
 
 
 const mealContainer = document.querySelector('.data')
-
 
 async function getMeals() {
     const url = 'https://www.themealdb.com/api/json/v1/1/random.php'
@@ -117,7 +117,7 @@ async function renderMeal() {
     // if the innertext of the class ingredient is empty, remove the li
     const emptyIngredients = document.querySelectorAll('.ingredient')
     emptyIngredients.forEach(ingredient => {
-        if (ingredient.innerText === '-' || ingredient.innerHTML === null) {
+        if (ingredient.innerText === '-'){
             ingredient.remove()
         }
         
@@ -128,7 +128,8 @@ async function renderMeal() {
     img.src = meal.meals[0].strMealThumb
     img.alt = meal.meals[0].strMeal
 
-
+    // remove the class food from img
+    img.classList.remove('food')
     
 
 }

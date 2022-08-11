@@ -231,6 +231,7 @@ p {
     height: 2px;
 }
 
+
 /* container to hold img and data */
 .info {
     display: flex;
@@ -241,6 +242,12 @@ p {
     height: 100%;
     gap: 25px;
 }
+
+.food {
+    display: none;
+}
+
+/* hide img before button clicked */
 
 .random {
     display: flex;
