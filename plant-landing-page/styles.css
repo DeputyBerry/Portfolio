@@ -40,11 +40,31 @@ a{
     padding-right: 15px;
 }
 
-@media (min-width: 768px){
-    .container {
+@media screen and (min-width: 768px) and (max-width: 1200px){
+     .container {
         width: 750px;
     }
+
+    .about{
+      /* display is a 1 row column */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info{
+      /* display is a 1 row column */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* spans across width of window */
+      width: 100%;
+
+    }
 }
+  
 
 @media (min-width: 992px) {
     .container {
@@ -62,6 +82,9 @@ a{
 body{
     font-size: 18px;
     font-family: 'Barlow', sans-serif;
+}
+@media screen and  {
+  
 }
 
 h1,
@@ -264,104 +287,157 @@ h2,
     }
   }
 
-  .about .box .image-holder {
+.about .box .image-holder {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .about .box:first-of-type .image-holder {
         background-image: url('https://gardenhelpful.com/wp-content/uploads/2020/04/Best-Soil-Amendments.png');
-    }
+        display: none;
+  }
 
-    .about .box:last-of-type .image-holder{
-        background-image: url('https://www.decorilla.com/online-decorating/wp-content/uploads/2021/07/Lucious-plants-in-interior-design-1.jpeg');
+  @media screen and (min-width: 1201px){
+    .about .box:first-of-type .image-holder {
+        display: block;
     }
+  }
 
-    .hide-img-in-desktop {
+  .hide-img-in-desktop {
         display: none;
     }
   }
-
-  .about .box .image-holder img {
+.about .box .image-holder img {
         max-width: 100%;
   }
 
-  .about .box .info {
+.about .box .info {
     padding: 50px 30px;
     background-color: #EDEDEE;
   }
 
-  @media (min-width: 768px) {
-    .about .box .info {
-        display: flex;
+@media screen and (min-width:768px) and (max-width:1200px) {
+     /* first of .about .box .info */
+     .about .box:first-of-type .info {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-image: url('https://gardenhelpful.com/wp-content/uploads/2020/04/Best-Soil-Amendments.png');
+      background-repeat: no-repeat;
+      background-size: cover; 
+ } 
+
+      /* second of .about .box .info */
+      .about .box:last-of-type .info {
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+        width: 100%;
+        background-image: url('https://www.decorilla.com/online-decorating/wp-content/uploads/2021/07/Lucious-plants-in-interior-design-1.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        
   }
 
-  @media (min-width: 992px) {
+  .services{
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+
+  .text-holder {
+    position: relative;
+    bottom: 50%;
+  }
+
+  .text-holder > h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }  
+
+  .text-holder > p {
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1.75;
+    
+  }
+
+  /* hide .image-holder */
+  .about .box .image-holder {
+    display: none;
+  }
+
+@media (min-width: 992px) {
     .about .box .info .holder {
         width: 70%;
         margin: 0 auto;
-    }
   }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .about .box .info .holder {
         text-align: center;
     }
-  }
+}
 
-  .about .box .info .title {
+.about .box .info .title {
     font-size: 2.5rem;
     font-weight: 900;
     color: var(--very-dark-desaturated-blue);
-  }
+}
 
-  @media(max-width: 767px) {
+@media(max-width: 767px) {
     .about .box .info .title {
         font-size: 2rem;
     }
-  }
+}
 
-  .about .box .info .description {
+.about .box .info .description {
     color: var(--dark-grayish-blue);
     font-size: 16px;
     line-height: 1.5;
-  }
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .about .box .info .description {
         padding-right: 3.5rem;
         margin: 35px 0;
     }
-  }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .about .box .info .description {
         margin: 1.5rem 0;
         font-size: 14px;
     }
-  }
+}
 
-  .about .box .info .learn-more {
+.about .box .info .learn-more {
     text-transform: uppercase;
     color: var(--very-dark-desaturated-blue);
     font-size: 16px;
     position: relative;
     padding-left: 5px;
     padding-right: 5px;
-  }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .about .box .info .learn-more {
         font-size: 14px;
     }
-  }
+}
 
-  .about .box .info .learn-more::after {
+.about .box .info .learn-more::after {
     content: "";
     width: 100%;
     height: 10px;
@@ -373,34 +449,34 @@ h2,
     z-index: -1;
     filter: blur(3px);
     transition: 0.5s;
-  }
+}
 
-  .about .box:first-of-type .info .learn-more::after {
+.about .box:first-of-type .info .learn-more::after {
     opacity: 90%;
     filter: blur(1px);
-  }
+}
   /* End About */
 
   /* Start Services */
 
-  .services{
+.services{
     display: flex;
     position: relative;
-  }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .services {
         flex-direction: column;
     }
-  }
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .services > * {
         width: 50%;
     }
-  }
+}
 
-  .services .box {
+.services .box {
     padding: 50px 30px;
     height: 70vh;
     background-position: center;
@@ -408,84 +484,84 @@ h2,
     display: flex;
     align-items: flex-end;
     justify-content: center;
-  }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .services .box {
         height: 90vh;
         background-color: #EDEDEE;
     }
-  }
+}
 
-  .services .box:first-of-type {
+.services .box:first-of-type {
     background-image: url('https://media.istockphoto.com/photos/love-the-nature-picture-id512389477?k=20&m=512389477&s=612x612&w=0&h=FK1iRa1Mja2eso0_YOy_vUcXNfv5mx0Y3fCeF4NKLVY=');
     color: white;
-  }
+}
 
-  .services .box:last-of-type {
+.services .box:last-of-type {
     background-image: url('https://media.istockphoto.com/photos/woman-with-son-in-a-home-grown-garden-picture-id1007739448?b=1&k=20&m=1007739448&s=612x612&w=0&h=DGrdJHrs4hKbAD7HAXnT-ewzZZ6uYG5PVu46JRnMrek=');
     color: white;
-  }
+}
 
-  .services .box .text-holder {
+.services .box .text-holder {
     text-align: center;
-  }
+}
 
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .services .box .text-holder {
         width: 55%;
     }
-  }
+}
 
-  .services .box .text-holder .description {
+.services .box .text-holder .description {
     font-size: 16px;
     line-height: 1.6;
-  }
+}
   /* End Services */
 
   /* Start Testimonials */
-  .testimonials {
+.testimonials {
     padding-top: 10rem;
     padding-bottom: 10rem;
     text-align: center;
     background-color: #EDEDEE;
   }
 
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .testimonials {
         display: flex;
         align-items: center;
     }
-  }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .testimonials {
         padding: 4rem 1rem 6rem;
     }
-  }
+}
 
-  .testimonials .holder {
+.testimonials .holder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-  }
+}
 
-  @media (max-width: 991px) {
+@media (max-width: 991px) {
     .testimonials .holder {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 70px;
     }
-  }
+}
 
-  .testimonials .title {
+.testimonials .title {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 8px;
     color: var(--grayish-blue);
     margin-bottom: 100px;
     font-size: 22px;
-  }
+}
 
   .testimonials .holder .box .reviewer-pic {
     width: 70px;
