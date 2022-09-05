@@ -156,8 +156,8 @@ li {
    }
 
    p {
-    width: 50%;
-    line-height: 2;
+    width: 100%;
+    line-height: 1.5;
    }
 
    iframe {
@@ -214,7 +214,7 @@ li {
     
 
 .title {
-    font-size: 4.5vw;
+    font-size: 6.5vw;
 }
 
 .button {
