@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    height: 150vh;
+    background: linear-gradient(lightblue, white);
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 1rem;
+    margin-bottom: 50px;
+}
+
+input{
+    width: 200px; 
+}
+
+button{
+    display: block;
+    margin: 20px auto;
+}
+
+img {
+    max-height: 300px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+table {
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+
